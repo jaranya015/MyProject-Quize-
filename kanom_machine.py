@@ -83,48 +83,48 @@ if enter_order in kanom_dict :
                 
 '''BY AI'''
 
-# print("Kanom Machine")
-# print(f"  1. Khanom Jak             7 Baht\n  2. Khanom Kruy           13 Baht\n  3. Khanom Keemod          9 Baht\n  4. Khanom Co              3 Baht\n  5. Khanom Dokdon         22 Baht")
+print("Kanom Machine")
+print(f"  1. Khanom Jak             7 Baht\n  2. Khanom Kruy           13 Baht\n  3. Khanom Keemod          9 Baht\n  4. Khanom Co              3 Baht\n  5. Khanom Dokdon         22 Baht")
 
-# kanom_dict = {"1": 7, "2": 13, "3": 9, "4": 3, "5": 22}
+kanom_dict = {"1": 7, "2": 13, "3": 9, "4": 3, "5": 22}
 
-# while True:  # Loop to allow multiple orders
-#     enter_order = input("Enter your order+: ")
-#     if enter_order.lower() == 'q':
-#         break  # Exit the loop if user enters 'q'
+while True:  # Loop to allow multiple orders
+    enter_order = input("Enter your order+: ")
+    if enter_order.lower() == 'q':
+        break  # Exit the loop if user enters 'q'
 
-#     try:
-#         enter_quantity = int(input("Enter quantity: "))
-#     except ValueError:
-#         print("Invalid quantity. Please enter a number.")
-#         continue  # Skip to the next iteration of the loop
+    try:
+        enter_quantity = int(input("Enter quantity: "))
+    except ValueError:
+        print("Invalid quantity. Please enter a number.")
+        continue  # Skip to the next iteration of the loop
 
-#     if enter_order in kanom_dict:
-#         price = kanom_dict[enter_order]
-#         total = price * enter_quantity
-#         print("Total:", total, "Baht")
+    if enter_order in kanom_dict:
+        price = kanom_dict[enter_order]
+        total = price * enter_quantity
+        print("Total:", total, "Baht")
 
-#         while True:  # Loop to ensure correct payment
-#             try:
-#                 enter_your_money = int(input("Enter your money: "))
-#             except ValueError:
-#                 print("Invalid input. Please enter a number.")
-#                 continue
+        while True:  # Loop to ensure correct payment
+            try:
+                enter_your_money = int(input("Enter your money: "))
+            except ValueError:
+                print("Invalid input. Please enter a number.")
+                continue
 
-#             if enter_your_money >= total:
-#                 change = enter_your_money - total
-#                 if change > 0:
-#                     print("Change:")
-#                     for coin_value in [10, 5, 2, 1]:
-#                         coins = change // coin_value
-#                         if coins > 0:
-#                             print(f"{coin_value}: {coins} coins")
-#                             change -= coins * coin_value
-#                 print("Thank you!")
-#                 break  # Exit the payment loop
-#             else:
-#                 print("Not enough money. Please enter the correct amount.")
-#     else:
-#         print("Invalid order. Please try again.")
+            if enter_your_money >= total:
+                change = enter_your_money - total
+                if change > 0:
+                    print("Change:")
+                    for coin_value in [10, 5, 2, 1]:
+                        coins = change // coin_value
+                        if coins > 0:
+                            print(f"{coin_value}: {coins} coins")
+                            change -= coins * coin_value
+                print("Thank you!")
+                break  # Exit the payment loop
+            else:
+                print("Not enough money. Please enter the correct amount.")
+    else:
+        print("Invalid order. Please try again.")
 
     
