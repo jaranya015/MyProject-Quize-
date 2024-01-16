@@ -44,3 +44,21 @@ user_input = input("Text: ") # รับ input Text จากผู้ใช้�
 formatted_text = capitalize_text(user_input) # formatted_text แทนด้วยการเรียกใช้งาน funtion ของ capitalize_text()
 
 print(f'=> {formatted_text}') # แสดงผล formatted_text ผ่านทางหน้าโดยใช้ format string ช่วยในการจัดตำแหน่งของข้อความ
+
+
+
+
+'''------------------------------------------------------------------------------------------------------------'''
+
+
+
+user_input = input("Text :").split()
+new_word = ""
+for word in range(len(user_input)) :
+    if user_input[word].isdigit():
+        user_input[word] = user_input[word]
+    else :
+        user_input[word] = user_input[word].capitalize()
+    new_word += user_input[word] + " "
+    
+print(f'=> {new_word}')
