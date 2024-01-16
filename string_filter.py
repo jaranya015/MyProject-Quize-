@@ -9,12 +9,12 @@ Love, Song ไม่อยากให้แสดง Love → ****, Song
 Enter text: Hello, World!
 Enter filter word: Hell
 Text after filter is "****o, World!"
-Hello, World! และ Hell คือข้อความที่ใส่ให้โปรแกรม
+Hello, World! และ Hell คือข้อความที่ใส่ให้โปรแกรม'''
 
 enter = input("Enter text: ")
 enter2 = input("Enter filter word: ")
 encode_text = enter.replace(enter2 , '*'*len(enter2))
-print(f'Text after filter is "{encode_text}"')'''
+print(f'Text after filter is "{encode_text}"')
     
     
     
