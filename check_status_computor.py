@@ -26,6 +26,8 @@ elif new_your_number == 1 :
 elif new_your_numbe2 == 2 :
     print("Error")
     
+'''-------------------------------------------------------------------------'''
+
 
 def check_computer_status():
     enter_your_number = int(input("Enter computer status code: "))
