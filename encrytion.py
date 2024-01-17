@@ -26,3 +26,20 @@ def encryption(characters):
 enter = input("Enter 5 characters: ")
 enter.lower()
 print(f"Encryption is {encryption(enter)}")
+
+
+
+
+# option 2
+
+alphabet = "abcdefghijklmnopqrstuvwxyz"
+input_enter = input("Enter 5 characters: ").lower()
+encryption = []
+
+for char_in_input_enter in input_enter:
+    if char_in_input_enter in alphabet:
+        encrypted_char = alphabet[-(alphabet.index(char_in_input_enter) + 1)]
+        encryption.append(encrypted_char)
+
+result = ''.join(encryption)
+print('Encryption is', result)
