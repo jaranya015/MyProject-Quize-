@@ -47,3 +47,31 @@ else:
 
 
 
+
+def cm_to_mm_tom():
+    user_input = input("Enter value in mm, cm, and m: ")
+    number = ""
+    unit = ""
+    dict_unit = {"cm":10**-2,
+                 "mm":10**-3,
+                 "m":1
+                 }
+    for char in user_input :
+        if char.isdigit() :
+            number += char
+        else :
+            unit += char
+    if unit in dict_unit :
+        value = float(number)*dict_unit[unit]
+                
+        user_input2 = input("Enter unit to covert in mm, cm, m: ")
+        for char2 in user_input2:
+            if char2 in dict_unit:
+                value2 = float(dict_unit[char2])
+    return f"Value after unit conversion is {value*value2} {user_input2}"
+            
+if __name__ == "__main__":
+    print(cm_to_mm_tom())
+
+
+
