@@ -78,4 +78,37 @@ def main():
         
 if __name__ == "__main__":
     main()
-               
+
+
+print("**********************************************************************************************")
+
+
+def rot_13():
+    print("Select 2 options \n - 1 encrypt with ROT 13 \n - 2 decrypt with ROT 13")
+    user_choose = int(input("Choose option: "))
+    if user_choose == 1:
+        ciphertext = "Ciphertext"
+    else :
+        ciphertext = "Plaintext"
+    user_enter_text = input("Enter text: ")
+    encryption_dict = {
+    'A': 'N', 'B': 'O', 'C': 'P', 'D': 'Q', 'E': 'R', 'F': 'S', 'G': 'T',
+    'H': 'U', 'I': 'V', 'J': 'W', 'K': 'X', 'L': 'Y', 'M': 'Z',
+    'N': 'A', 'O': 'B', 'P': 'C', 'Q': 'D', 'R': 'E', 'S': 'F', 'T': 'G',
+    'U': 'H', 'V': 'I', 'W': 'J', 'X': 'K', 'Y': 'L', 'Z': 'M',
+    'a': 'n', 'b': 'o', 'c': 'p', 'd': 'q', 'e': 'r', 'f': 's', 'g': 't',
+    'h': 'u', 'i': 'v', 'j': 'w', 'k': 'x', 'l': 'y', 'm': 'z',
+    'n': 'a', 'o': 'b', 'p': 'c', 'q': 'd', 'r': 'e', 's': 'f', 't': 'g',
+    'u': 'h', 'v': 'i', 'w': 'j', 'x': 'k', 'y': 'l', 'z': 'm'
+    }
+    decryption_dict_swapped = {v: k for k, v in encryption_dict.items()}
+    result = ""
+    for char in user_enter_text :
+        if user_choose == 1 :
+            result += encryption_dict.get(char,char)
+        else :
+            result += decryption_dict_swapped.get(char,char)
+    return f'{ciphertext} is "{result}"'
+if __name__ == "__main__":
+    print(rot_13())
+
