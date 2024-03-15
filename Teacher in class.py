@@ -17,6 +17,8 @@ Threshhold Number: 2
 Time: 0 -1 2 1
 Decision: No//
 
+
+//---------------------------------------------------------------------------//
 def input_by_user():
     user_input = int(input("Threshhold Number: "))
     return user_input
@@ -34,5 +36,36 @@ def calculate():
         print("NO")
  
     
-calculate()               
+calculate()    
+
+//-----------------------------------------------------------------------//
+
+# ส่วนการรับข้อมูล
+def get_threshold():
+    threshold = int(input("Enter the threshold number: "))
+    return threshold
+
+def get_times():
+    times = [int(x) for x in input("Enter space-separated times: ").split()]
+    return times
+
+# ส่วนการคำนวณ
+def calculate_threshold_exceed(threshold, times):
+    negative_sum = sum([time for time in times if time < 0])
+    absolute_sum = abs(negative_sum)
+    if absolute_sum > threshold:
+        return "YES"
+    else:
+        return "NO"
+
+# ฟังก์ชันหลัก
+def main():
+    threshold = get_threshold()
+    times = get_times()
+    result = calculate_threshold_exceed(threshold, times)
+    print("Does the negative sum exceed the threshold?", result)
+
+if __name__ == "__main__":
+    main()
+
 
